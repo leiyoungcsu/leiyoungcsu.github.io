@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <title>Gonotes - Ashes Of Time Redux</title>
+  <link rel='canonical' href='https://leiyoungcsu.github.io/post/gonotes/' />
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <meta name='description' content='' />
+  <meta name='theme-color' content='#FD3519' />
+  
+
+  <meta name="generator" content="Hugo 0.55.5" />
+
+  
+
+
+
+
+
+<link rel="stylesheet" href="https://leiyoungcsu.github.io/sass/style.min.8a1658d134a4b54730b66789206b2cf14c1b006a6de3f3fde6302f925b6e01f5.css" integrity="sha256-ihZY0TSktUcwtmeJIGss8UwbAGpt4/P95jAvkltuAfU=" media="screen">
+<link rel="stylesheet" href="https://leiyoungcsu.github.io/syntax.min.css" integrity="" media="screen">
+
+  <meta property="og:title" content="Gonotes" />
+<meta property="og:description" content="Go语言是web时代的C语言
+ 在Go中函数也是一种变量，我们可以通过type来定义它，它的类型就是所有拥有相同的参数，相同的返回值的一种类型。
+// main project main.go package main import ( &quot;fmt&quot; ) type testInt func(int) bool//声明一个函数原型 func isOdd(integer int) bool {//奇数 if integer%2 == 0 { return false } return true } func isEven(integer int) bool {//偶数 if integer%2 == 0 { return true } return false } func filter(slice []int, f testInt) []int { var result []int for _, value := range slice { if f(value) { result = append(result, value) } } return result } func main() { slice := []int{1, 2, 3, 4, 5, 7} fmt." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://leiyoungcsu.github.io/post/gonotes/" />
+<meta property="article:published_time" content="2019-05-14T15:26:19&#43;08:00"/>
+<meta property="article:modified_time" content="2019-05-14T15:26:19&#43;08:00"/>
+
+  
+<meta itemprop="name" content="Gonotes">
+<meta itemprop="description" content="Go语言是web时代的C语言
+ 在Go中函数也是一种变量，我们可以通过type来定义它，它的类型就是所有拥有相同的参数，相同的返回值的一种类型。
+// main project main.go package main import ( &quot;fmt&quot; ) type testInt func(int) bool//声明一个函数原型 func isOdd(integer int) bool {//奇数 if integer%2 == 0 { return false } return true } func isEven(integer int) bool {//偶数 if integer%2 == 0 { return true } return false } func filter(slice []int, f testInt) []int { var result []int for _, value := range slice { if f(value) { result = append(result, value) } } return result } func main() { slice := []int{1, 2, 3, 4, 5, 7} fmt.">
+
+
+<meta itemprop="datePublished" content="2019-05-14T15:26:19&#43;08:00" />
+<meta itemprop="dateModified" content="2019-05-14T15:26:19&#43;08:00" />
+<meta itemprop="wordCount" content="2938">
+
+
+
+<meta itemprop="keywords" content="" />
+
+</head>
+<body>
+
+  <header style="background-image:linear-gradient(
+      rgba(0,0,0,0.4),rgba(0,0,0,0.4)
+    ),url(&#39;https://leiyoungcsu.github.io/images/default-sidebar.jpg&#39;)">
+
+  <div class="intro">
+    <div class="logo-container">
+      <a href="/">
+        <img src='https://leiyoungcsu.github.io/images/yang.jpg' alt="Profile Posts" class="rounded-logo">
+      </a>
+    </div>
+    <h2>Hi, I'm Yanglei 👋</h2>
+    <h3>I'm a  Amateur</h3>
+    <div class="menu">
+      
+
+        <p>
+            <a href="/about/">
+                less is more
+            </a>
+        </p>
+
+        <p>
+            <a href="/post/">
+                Post
+            </a>
+        </p>
+
+      
+        
+        <p>
+            <a href="mailto:602650262" target="_blank" rel="external">
+                602650262@qq.com
+            </a>
+        </p>
+      
+    </div>
+
+  </div>
+
+  <div class="socials">
+      
+  
+    <a href="https://github.com/" class="social-link" target="_blank" rel="noopener" ><div class="icon">
+  <svg width="35px" height="35px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+  
+  <path d="M102.679 0H12.32C5.52 0 0 5.519 0 12.321v90.358C0 109.48 5.519 115 12.321 115h90.358c6.802 0 12.321-5.519 12.321-12.321V12.32C115 5.52 109.481 0 102.679 0zM71.182 98.494c-2.156.385-2.952-.95-2.952-2.053 0-1.386.051-8.471.051-14.195 0-4.005-1.335-6.546-2.9-7.881C74.878 73.313 84.89 72.003 84.89 55.6c0-4.671-1.669-7.007-4.39-10.01.436-1.105 1.9-5.648-.436-11.552-3.568-1.104-11.731 4.595-11.731 4.595-3.389-.95-7.06-1.438-10.679-1.438-3.62 0-7.29.488-10.679 1.438 0 0-8.163-5.699-11.73-4.595-2.337 5.878-.899 10.422-.437 11.551-2.72 3.004-4.004 5.34-4.004 10.011 0 16.326 9.574 17.712 19.072 18.765-1.232 1.104-2.336 3.003-2.72 5.724-2.44 1.104-8.677 3.004-12.4-3.568-2.335-4.056-6.545-4.39-6.545-4.39-4.159-.05-.282 2.619-.282 2.619 2.772 1.283 4.723 6.212 4.723 6.212 2.49 7.624 14.4 5.057 14.4 5.057 0 3.568.052 9.37.052 10.422 0 1.104-.77 2.438-2.952 2.053C27.21 92.821 15.35 76.701 15.35 57.86c0-23.564 18.02-41.456 41.585-41.456s42.663 17.892 42.663 41.456c.026 18.842-11.474 34.988-28.416 40.635zM46 82.81c-.488.103-.95-.102-1.001-.436-.051-.385.282-.719.77-.822.488-.05.95.154 1.001.488.077.334-.257.668-.77.77zm-2.439-.23c0 .333-.385.615-.898.615-.565.052-.95-.23-.95-.616 0-.333.385-.616.899-.616.487-.051.95.231.95.616zm-3.516-.283c-.103.334-.616.488-1.053.334-.488-.103-.821-.488-.719-.822.103-.334.617-.488 1.053-.385.513.154.847.54.719.873zm-3.158-1.386c-.23.282-.718.23-1.104-.154-.385-.334-.487-.822-.23-1.053.23-.282.718-.23 1.103.154.334.334.462.847.231 1.053zm-2.336-2.336c-.23.154-.667 0-.95-.385-.282-.385-.282-.822 0-1.001.283-.231.72-.052.95.333.283.385.283.847 0 1.053zm-1.668-2.49c-.231.23-.616.103-.899-.154-.282-.334-.333-.719-.102-.899.23-.23.616-.102.898.154.282.334.334.72.103.899zm-1.72-1.9c-.103.231-.436.283-.719.103-.334-.154-.488-.436-.385-.667.103-.154.385-.231.719-.103.334.18.488.462.385.667z"/>
+  
+  </svg>
+</div>
+</a>
+  
+
+  
+    <a href="https://www.linkedin.com/in/" class="social-link" target="_blank" rel="noopener" ><div class="icon">
+  <svg width="35px" height="35px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+  
+  <path d="M106.786 0H8.189C3.67 0 0 3.722 0 8.291v98.418C0 111.278 3.67 115 8.189 115h98.597c4.518 0 8.214-3.722 8.214-8.291V8.29C115 3.722 111.304 0 106.786 0zm-72.03 98.571H17.713V43.69h17.07V98.57h-.025zm-8.522-62.377c-5.467 0-9.882-4.44-9.882-9.883 0-5.442 4.415-9.882 9.882-9.882 5.442 0 9.883 4.44 9.883 9.882a9.87 9.87 0 0 1-9.883 9.883zm72.414 62.377H81.604V71.875c0-6.366-.129-14.555-8.856-14.555-8.882 0-10.242 6.931-10.242 14.093V98.57H45.46V43.69h16.352v7.495h.23c2.285-4.312 7.855-8.856 16.147-8.856 17.25 0 20.458 11.372 20.458 26.158V98.57z"/>
+  
+  </svg>
+</div>
+</a>
+  
+
+  
+    <a href="https://twitter.com/" class="social-link" target="_blank" rel="noopener" ><div class="icon">
+  <svg width="35px" height="35px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+  
+  <path d="M102.679 0H12.32C5.52 0 0 5.519 0 12.321v90.358C0 109.48 5.519 115 12.321 115h90.358c6.802 0 12.321-5.519 12.321-12.321V12.32C115 5.52 109.481 0 102.679 0zM90.126 40.763c.051.72.051 1.464.051 2.182 0 22.256-16.942 47.9-47.9 47.9-9.548 0-18.404-2.772-25.848-7.547 1.36.154 2.67.205 4.055.205 7.881 0 15.12-2.67 20.895-7.187-7.392-.154-13.604-5.006-15.735-11.68 2.593.385 4.929.385 7.598-.308a16.837 16.837 0 0 1-13.476-16.531v-.205a16.824 16.824 0 0 0 7.598 2.13 16.8 16.8 0 0 1-7.496-14.016c0-3.131.822-6.006 2.285-8.496a47.803 47.803 0 0 0 34.705 17.61c-2.387-11.424 6.161-20.69 16.429-20.69 4.851 0 9.215 2.027 12.296 5.313a32.99 32.99 0 0 0 10.678-4.056 16.792 16.792 0 0 1-7.393 9.267c3.389-.36 6.674-1.31 9.703-2.618a35.437 35.437 0 0 1-8.445 8.727z"/>
+  
+  </svg>
+</div>
+</a>
+  
+
+  </div>
+
+</header>
+
+  <div class="content-wrapper">
+    
+      <div class="breadcrumb">
+  
+
+
+
+
+
+<span >
+  <a href="https://leiyoungcsu.github.io/">Ashes Of Time Redux</a>
+   / 
+</span>
+
+
+<span >
+  <a href="https://leiyoungcsu.github.io/post/">Posts</a>
+   / 
+</span>
+
+
+<span  class="active">
+  <a href="https://leiyoungcsu.github.io/post/gonotes/">Gonotes</a>
+  
+</span>
+
+</div>
+
+    
+    <main id="content" class="post">
+
+<h1>Gonotes</h1>
+<div class="reading-time">
+  <div class="icon">
+  <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+  
+  <path d="M57.5 11C29.05 11 6 34.05 6 62.5S29.05 114 57.5 114 109 90.95 109 62.5 85.95 11 57.5 11zm0 93.032c-22.947 0-41.532-18.585-41.532-41.532 0-22.947 18.585-41.532 41.532-41.532 22.947 0 41.532 18.585 41.532 41.532 0 22.947-18.585 41.532-41.532 41.532zm12.833-21.68L52.703 69.54a2.508 2.508 0 0 1-1.018-2.015V33.427a2.5 2.5 0 0 1 2.492-2.492h6.646a2.5 2.5 0 0 1 2.492 2.492v29.426l13.871 10.092c1.122.81 1.35 2.368.54 3.49l-3.904 5.377a2.51 2.51 0 0 1-3.489.54z"/>
+  
+  </svg>
+</div>
+
+  <span>14 minutes</span>
+</div>
+
+<div class="published-date">
+  <div class="icon">
+  <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+  
+  <path d="M77.577 51.23a1.807 1.807 0 0 0-2.2.342l-27.562 27.79a1.807 1.807 0 0 1-2.2.342l-14.008-9.702a1.807 1.807 0 0 0-2.2.342l-1.952 1.968c-.287.22-.456.568-.455.936.001.37.172.716.46.934L45.637 86.77a1.807 1.807 0 0 0 2.2-.342l31.709-31.97c.287-.22.456-.567.455-.936a1.175 1.175 0 0 0-.46-.933l-1.963-1.36z"/><path d="M97.304 20H80.512c-.041.34-.063.683-.064 1.026a5.986 5.986 0 0 0 1.256 4.1c.054.003.103.02.157.025a4.881 4.881 0 0 1 1.865-.025c3.05.562 4.984 3.907 4.32 7.47-.666 3.563-3.678 5.996-6.728 5.433a4.932 4.932 0 0 1-2.437-1.258c-6.018-1.378-10.445-7.795-10.445-15.745 0-.347.023-.685.04-1.026H34.579c-.041.34-.063.683-.064 1.026a5.986 5.986 0 0 0 1.256 4.1c.054.003.103.02.157.025a4.881 4.881 0 0 1 1.865-.025c3.05.562 4.984 3.907 4.32 7.47-.666 3.563-3.678 5.996-6.728 5.433a4.932 4.932 0 0 1-2.437-1.258c-6.018-1.378-10.445-7.795-10.445-15.745 0-.22.019-.434.025-.652a9.788 9.788 0 0 0-5.697 4.471 9.683 9.683 0 0 0-2.65 4.764L1.158 92.871c-.965 4.689 2.6 8.503 7.948 8.503h6.334v2.673c-.077 5.41 4.263 9.861 9.705 9.953h72.16c5.438-.095 9.774-4.546 9.694-9.953V29.953c.08-5.407-4.256-9.858-9.695-9.953zM10.078 96.653c-2.378 0-3.964-1.697-3.535-3.782L16.637 43.84h80.787L87.331 92.871a5.254 5.254 0 0 1-5.091 3.782H10.078zm91.535 7.394c.036 2.403-1.891 4.382-4.308 4.424h-72.16c-2.42-.04-4.352-2.018-4.32-4.424v-2.673h60.443c5.348 0 10.484-3.814 11.449-8.503l8.897-43.215v54.391z"/><path d="M34.814 33c1.243 0 2.251-1.057 2.251-2.36 0-1.305-1.008-2.362-2.25-2.362-2.04 0-4.313-3.194-4.313-7.778s2.272-7.778 4.312-7.778c1.227 0 2.536 1.163 3.386 3.084H43C41.716 11.19 38.578 8 34.814 8 29.871 8 26 13.49 26 20.5c0 7.009 3.871 12.5 8.814 12.5z"/>
+  
+  </svg>
+</div>
+
+  <span>May 14, 2019</span>
+</div>
+
+<p>Go语言是web时代的C语言</p>
+
+<hr />
+
+<blockquote>
+<p>在Go中函数也是一种变量，我们可以通过type来定义它，它的类型就是所有拥有相同的参数，相同的返回值的一种类型。</p>
+
+<pre><code>// main project main.go
+package main
+
+import (
+	&quot;fmt&quot;
+)
+
+type testInt func(int) bool//声明一个函数原型
+
+func isOdd(integer int) bool {//奇数
+	if integer%2 == 0 {
+		return false
+	}
+	return true
+}
+func isEven(integer int) bool {//偶数
+	if integer%2 == 0 {
+		return true
+	}
+	return false
+}
+func filter(slice []int, f testInt) []int {
+	var result []int
+	for _, value := range slice {
+		if f(value) {
+			result = append(result, value)
+		}
+	}
+	return result
+}
+func main() {
+	slice := []int{1, 2, 3, 4, 5, 7}
+	fmt.Println(&quot;slice = &quot;, slice)
+	odd := filter(slice, isOdd) // 函数当做值来传递了
+	fmt.Println(&quot;Odd elements of slice are: &quot;, odd)
+	even := filter(slice, isEven) // 函数当做值来传递了
+	fmt.Println(&quot;Even elements of slice are: &quot;, even)
+}
+</code></pre>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>GO搭建一个 web服务器
+Go语言里面提供了一个完善的net/http包，通过http包可以很方便的就搭建起来一个可以运行的web服务。同时使用这个 包能很简单地对web的路由，静态文件，模版，cookie等数据进行设置和操作。</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;strings&quot;
+)
+
+func sayhelloName(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()       //解析参数，默认是不会解析的
+	fmt.Println(r.Form) //这些信息是输出到服务器端的打印信息
+	fmt.Println(&quot;path&quot;, r.URL.Path)
+	fmt.Println(&quot;scheme&quot;, r.URL.Scheme)
+	fmt.Println(r.Form[&quot;url_long&quot;])
+	for k, v := range r.Form {
+		fmt.Println(&quot;key:&quot;, k)
+		fmt.Println(&quot;val:&quot;, strings.Join(v, &quot;&quot;))
+	}
+	fmt.Fprintf(w, &quot;Hello astaxie!&quot;) //这个写入到w的是输出到客户端的
+}
+func main() {
+	http.HandleFunc(&quot;/&quot;, sayhelloName)       //设置访问的路由
+	err := http.ListenAndServe(&quot;:9090&quot;, nil) //设置监听的端口
+	if err != nil {
+		log.Fatal(&quot;ListenAndServe: &quot;, err)
+	}
+}
+</code></pre>
+
+<p>web工作方式的几个概念
+以下均是服务器端的几个概念
+Request：用户请求的信息，用来解析用户的请求信息，包括post、get、cookie、url等信息
+Response：服务器需要反馈给客户端的信息
+Conn：用户的每次请求链接
+Handler：处理请求和生成返回信息的处理逻辑</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>http包执行流程
+1. 创建Listen Socket, 监听指定的端口, 等待客户端请求到来。
+2. Listen Socket接受客户端的请求, 得到Client Socket, 接下来通过Client Socket与客户端通信。
+3. 处理客户端的请求, 首先从Client Socket读取HTTP请求的协议头,如果是POST方法,还可能要读取客户端提交的数据, 然后交给相应的handler处理请求, handler处理完 毕准备好客户端需要的数据, 通过Client Socket写给客户端。</p>
+
+<p>这整个的过程里面我们只要了解清楚下面三个问题，也就知道Go是如何让Web运行起来 了
+• 如何监听端口？
+• 如何接收客户端请求？
+• 如何分配handler？</p>
+
+<p>前面小节的代码里面我们可以看到，Go是通过一个函数ListenAndServe来处理这些事情的</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>表单处理</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;html/template&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;strings&quot;
+)
+
+func sayhelloName(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()       //解析url传递的参数，对于POST则解析响应包的主体（request body）    //注意:如果没有调用ParseForm方法，下面无法获取表单的数据
+	fmt.Println(r.Form) //这些信息是输出到服务器端的打印信息
+	fmt.Println(&quot;path&quot;, r.URL.Path)
+	fmt.Println(&quot;scheme&quot;, r.URL.Scheme)
+	fmt.Println(r.Form[&quot;url_long&quot;])
+	for k, v := range r.Form {
+		fmt.Println(&quot;key:&quot;, k)
+		fmt.Println(&quot;val:&quot;, strings.Join(v, &quot;&quot;))
+	}
+	fmt.Fprintf(w, &quot;Hello astaxie!&quot;) //这个写入到w的是输出到客户端的
+}
+func login(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(&quot;method:&quot;, r.Method) //获取请求的方法
+	if r.Method == &quot;GET&quot; {
+		t, _ := template.ParseFiles(&quot;login.gtpl&quot;)
+		t.Execute(w, nil)
+	} else { //请求的是登陆数据，那么执行登陆的逻辑判断
+		fmt.Println(&quot;username:&quot;, r.Form[&quot;username&quot;])
+		fmt.Println(&quot;password:&quot;, r.Form[&quot;password&quot;])
+	}
+}
+func main() {
+	http.HandleFunc(&quot;/&quot;, sayhelloName)       //设置访问的路由
+	http.HandleFunc(&quot;/login&quot;, login)         //设置访问的路由
+	err := http.ListenAndServe(&quot;:9090&quot;, nil) //设置监听的端口
+	if err != nil {
+		log.Fatal(&quot;ListenAndServe: &quot;, err)
+	}
+}
+</code></pre>
+</blockquote>
+
+<hr />
+
+<p>go语言实现crud</p>
+
+<pre><code>package main
+
+import (
+	&quot;database/sql&quot;
+	&quot;fmt&quot;
+	&quot;log&quot;
+	_ &quot;mysql&quot;
+)
+
+var (
+	Id   string
+	Name string
+)
+
+func main() {
+	db, err := sql.Open(&quot;mysql&quot;, &quot;root:admin@tcp(127.0.0.1:3306)/godemo?charset=utf8&quot;)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer db.Close()
+	update(db)
+	sqlselect(db)
+
+	insert(db)
+	fmt.Println(&quot;插入后&quot;)
+	sqlselect(db)
+
+	delete(db)
+	fmt.Println(&quot;删除后&quot;)
+	sqlselect(db)
+}
+
+// 查询 数据
+func sqlselect(db *sql.DB) {
+	rows, err := db.Query(&quot;select * from test&quot;)
+	if err != nil {
+		fmt.Println(&quot;数据库查询出错执行出错&quot;)
+	}
+	for rows.Next() {
+		//按表名的顺序读取参数
+		err := rows.Scan(&amp;Name, &amp;Id)
+		if err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println(Name, Id)
+	}
+	rows.Close()
+}
+
+//更新
+func update(db *sql.DB) {
+	result, err := db.Exec(&quot;update test set Id = 1123 WHERE test.Name=?&quot;, &quot;a&quot;)
+	if err != nil {
+		fmt.Println(&quot;数据库执行更新出错&quot;)
+	}
+	changelow, err := result.RowsAffected()
+	if err != nil {
+	}
+	fmt.Println(&quot;共计&quot;, changelow, &quot;行受到影响&quot;)
+}
+
+//INSERT INTO `go`.`test` (`Id`, `Name`) VALUES ('4', 'd');
+//插入
+func insert(db *sql.DB) {
+	result, err := db.Exec(&quot;INSERT test (Id, Name) VALUES (?,?)&quot;, &quot;5&quot;, &quot;e&quot;)
+	if err != nil {
+		fmt.Println(&quot;数据库执行插入出错&quot;, err)
+		return
+	}
+	changelow, err := result.RowsAffected()
+	if err != nil {
+
+	}
+	fmt.Println(&quot;共计&quot;, changelow, &quot;行受到影响&quot;)
+}
+
+//DELETE FROM `go`.`test` WHERE `Id` = '5';
+//删除第5条数据
+func delete(db *sql.DB) {
+	result, err := db.Exec(&quot;DELETE FROM test WHERE `Id` = ?&quot;, 5)
+	if err != nil {
+		fmt.Println(&quot;数据库执行删除出错&quot;, err)
+		return
+	}
+	changelow, err := result.RowsAffected()
+	if err != nil {
+
+	}
+	fmt.Println(&quot;共计&quot;, changelow, &quot;行受到影响&quot;)
+}
+</code></pre>
+
+<p>//程序输出结果：
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+共计 0 行受到影响
+共计 1 行受到影响
+插入后
+5 e
+共计 1 行受到影响
+删除后
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<blockquote>
+<p>cookie机制是一种客户端机制，把用户数据保存在客户端，而session 机制是一种服务器端的机制，服务器使用一种类似于散列表的结构来保存信息，每一个网 站访客都会被分配给一个唯一的标志符,即sessionID,它的存放形式无非两种:要么经过url 传递,要么保存在客户端的cookies里。</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>session的基本原理是由服务器为每个会话维护一份信息数据，客户端和服务端依靠一个 全局唯一的标识来访问这份数据，以达到交互的目的。当用户访问Web应用时，服务端程 序会随需要创建session，这个过程可以概括为三个步骤：
+• 生成全局唯一标识符（sessionid）；
+• 开辟数据存储空间。一般会在内存中创建相应的数据结构，但这种情况下，系统一 旦掉电，所有的会话数据就会丢失，如果是电子商务类网站，这将造成严重的后果。所以为 了解决这类问题，你可以将会话数据写到文件里或存储在数据库中，当然这样会增加I/O 开销，但是它可以实现某种程度的session持久化，也更有利于session的共享；
+• 将session的全局唯一标示符发送给客户端。</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>方法就是一个有接收者的函数</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+type point struct {
+	x, y float64
+}
+type Rect struct {
+	min, max point
+}
+
+func (r *Rect) Area() float64 {
+	w := r.max.x - r.min.x
+	h := r.max.y - r.min.y
+	return w * h
+}
+func main() {
+	var r Rect
+	r.max = point{2, 9}
+	r.min = point{1, 3}
+	fmt.Println(r.Area())
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+6
+成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+type point struct {
+	x, y float64
+}
+type Rect struct {
+	min, max point
+}
+
+func (r *Rect) Area() float64 {
+	w := r.max.x - r.min.x
+	h := r.max.y - r.min.y
+	return w * h
+}
+func main() {
+	var r Rect
+	r.max = point{2, 9}
+	r.min = point{1, 3}
+	fmt.Println(r.Area(), (&amp;r).Area(), (*Rect).Area(&amp;r))
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+6 6 6
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<p>##并发基本概念
+&gt;异步async
+并行：多个任务并发执行</p>
+
+<blockquote>
+<p>同步sync
+串行：多个任务依次执行</p>
+
+<p>阻塞block
+某个并发任务由于拿不到资源没法干活，从而无所事事地干等</p>
+
+<p>异步回调async callback
+A线程唤起B线程，令其干活
+同时给B一个回调函数
+命令B在干完活以后，执行这个回调函数
+这个回调函数会与A线程发生交互
+A不必阻塞等待B执行的结果，AB两个线程可以并发执行</p>
+
+<p>死锁
+A锁住B的资源
+B锁住A要的资源
+AB同时阻塞
+案例：小两口的冷战
+女：锁住女人的尊严，得到男人的尊严后才释放
+男：锁住男人的尊严，得到女人的尊严后才释放
+线程池
+背景：线程的开销大
+内存：保存上下文数据</p>
+</blockquote>
+
+<hr />
+
+<p>#创建Goroutine</p>
+
+<pre><code>package main
+
+import (
+
+    &quot;fmt&quot;
+
+    &quot;time&quot;
+
+)
+
+ 
+
+func newTask() {
+
+    for {
+
+        fmt.Println(&quot;劳资是子协程&quot;)
+
+        time.Sleep(time.Second)
+
+    }
+
+}
+
+ 
+
+func main() {
+
+ 
+
+    //开一条协程，与主协程并发地执行newTask()
+
+    go newTask()
+
+ 
+
+    //主协程赖着不死，主协程如果死了，子协程也得陪着死
+
+    for {
+
+        fmt.Println(&quot;this is a main goroutine&quot;)
+
+        time.Sleep(time.Second)
+
+    }
+
+ 
+
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+this is a main goroutine
+劳资是子协程
+劳资是子协程
+this is a main goroutine
+this is a main goroutine
+劳资是子协程
+劳资是子协程
+this is a main goroutine
+this is a main goroutine
+劳资是子协程
+this is a main goroutine
+劳资是子协程
+劳资是子协程
+this is a main goroutine
+劳资是子协程
+this is a main goroutine
+this is a main goroutine
+劳资是子协程
+劳资是子协程
+this is a main goroutine
+this is a main goroutine
+劳资是子协程
+劳资是子协程
+this is a main goroutine
+this is a main goroutine
+劳资是子协程
+···</p>
+
+<hr />
+
+<blockquote>
+<p>通过runtime.Gosched()出让协程资源，让其他协程优先执行</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;runtime&quot;
+)
+
+func main() {
+
+	go func() {
+
+		for i := 0; i &lt; 5; i++ {
+
+			fmt.Println(&quot;go&quot;)
+
+		}
+
+	}()
+
+	for i := 0; i &lt; 2; i++ {
+
+		//让出时间片，先让别的协程执行，它执行完，再回来执行此协程
+
+		//（詹姆斯协程：先排档期，你们先上）
+
+		runtime.Gosched()
+
+		fmt.Println(&quot;hello&quot;)
+
+	}
+
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+go
+go
+go
+go
+go
+hello
+hello
+成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>协程自杀</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;runtime&quot;
+
+	&quot;time&quot;
+)
+
+func test() {
+
+	//遗嘱：临终前说的话
+
+	defer fmt.Println(&quot;这是test的遗嘱&quot;)
+
+	//自杀，触发提前执行遗嘱，暴毙，后边的好日子不过了，调用它的协程也暴毙
+
+	runtime.Goexit()
+
+	//自杀了，后边的好日子不过了
+
+	fmt.Println(&quot;生活承诺的很多美好事情...&quot;)
+
+	//到这是test的正常退出
+
+}
+
+func wildMan() {
+
+	for i := 0; i &lt; 6; i++ {
+
+		fmt.Println(&quot;我是野人，我不喜欢约束，我讨厌制约的我的主协程&quot;)
+
+		time.Sleep(time.Second)
+
+	}
+
+}
+
+func main() {
+
+	//一个会暴毙的协程
+
+	go func() {
+
+		fmt.Println(&quot;aaaaaaaaaaaaaa&quot;)
+
+		//test中有协程自杀程序runtime.Goexit()
+
+		test()
+
+		fmt.Println(&quot;bbbbbbbbbbbbbbb&quot;)
+
+	}()
+
+	//一个讨厌主协程约束的野人协程，主协程正常结束会把她带走
+
+	//如果主协程暴毙，则野人协程失去约束
+
+	go wildMan()
+
+	for i := 0; i &lt; 3; i++ {
+
+		time.Sleep(time.Second)
+
+	}
+
+	//主协程的暴毙，会令所有子协程失去牵制——野人永远失去控制
+
+	//主协程暴毙的情况下，如果所有协程都结束了，程序崩溃:fatal error: no goroutines (main called runtime.Goexit) - deadlock!
+
+	runtime.Goexit()
+
+	fmt.Println(&quot;主协程正常返回，会带走所有子协程&quot;)
+
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+aaaaaaaaaaaaaa
+这是test的遗嘱
+我是野人，我不喜欢约束，我讨厌制约的我的主协程
+我是野人，我不喜欢约束，我讨厌制约的我的主协程
+我是野人，我不喜欢约束，我讨厌制约的我的主协程
+我是野人，我不喜欢约束，我讨厌制约的我的主协程
+我是野人，我不喜欢约束，我讨厌制约的我的主协程
+我是野人，我不喜欢约束，我讨厌制约的我的主协程
+fatal error: no goroutines (main called runtime.Goexit) - deadlock!</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>协程间公平竞争</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;time&quot;
+)
+
+func PrinterVII(str string) {
+
+	for _, data := range str {
+
+		fmt.Printf(&quot;%c&quot;, data)
+
+		time.Sleep(time.Second)
+
+	}
+
+	fmt.Printf(&quot;\n&quot;)
+
+}
+
+func person1VII() {
+
+	PrinterVII(&quot;今生注定我爱你&quot;)
+
+}
+
+func person2VII() {
+
+	PrinterVII(&quot;FUCKOFF&quot;)
+
+}
+
+func main() {
+
+	go person1VII()
+
+	go person2VII()
+
+	for {
+
+		time.Sleep(time.Second)
+
+	}
+
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+今FU生C注K定我O爱F你F</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>通过channel实现同步</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;time&quot;
+)
+
+//语法点①：创建int类型的无缓存管道
+
+//var ch = make(chan int)
+
+var ch = make(chan int, 0)
+
+func Printer(str string) {
+
+	for _, data := range str {
+
+		fmt.Printf(&quot;%c&quot;, data)
+
+		time.Sleep(time.Second)
+
+	}
+
+	fmt.Printf(&quot;\n&quot;)
+
+}
+
+func person1() {
+
+	//打印完需要7秒钟
+
+	//劳资不打印完是不会往管道中塞数据的，阻塞不死你丫的
+
+	Printer(&quot;今生注定我爱你&quot;)
+
+	//箭头指向管道内部，写数据
+
+	//在打完今生注定我爱你（耗时7秒钟）后，才写入数据
+
+	//语法点②：向管道里写数据，无论读写，箭头只能朝左
+
+	//语法点⑤：如果管道缓存已满，则阻塞等待至有人取出数据腾出空间，再写入
+
+	ch &lt;- 666
+
+}
+
+func person2() {
+
+	//箭头指向管道外面，代表从管道中拿出数据，读数据
+
+	//语法点③：从管理取出数据，但不不接收
+
+	//语法点⑥：管道里没数据时，阻塞死等
+
+	&lt;-ch
+
+	//语法点④：从管理取出数据，且使用data变量接收
+
+	//data:=&lt;-ch
+
+	//fmt.Println(&quot;读出数据：&quot;,data)
+
+	//终于妈的可以打印了
+
+	Printer(&quot;FUCKOFF&quot;)
+
+}
+
+func main() {
+
+	go person1()
+
+	go person2()
+
+	//主协程赖着不死
+
+	for {
+
+		time.Sleep(time.Second)
+
+	}
+
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+今生注定我爱你
+FUCKOFF</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>通过channel实现同步和数据交互</p>
+
+<pre><code>
+package main
+
+ 
+
+import (
+
+    &quot;fmt&quot;
+
+    &quot;time&quot;
+
+)
+
+ 
+
+func main() {
+
+    //创建无缓存管道
+
+    ch := make(chan string)
+
+ 
+
+    //5、主协程结束
+
+    defer fmt.Println(&quot;主协程也结束&quot;)
+
+ 
+
+    //子协程负责写数据
+
+    go func() {
+
+        //3、结束任务
+
+        defer fmt.Println(&quot;子协程调用完毕&quot;)
+
+ 
+
+        //1、缓缓打印2次序号
+
+        for i := 0; i &lt; 2; i++ {
+
+            fmt.Println(&quot;子协程 i= &quot;, i)
+
+            time.Sleep(time.Second)
+
+        }
+
+ 
+
+        //2、向管道发送数据
+
+        ch &lt;- &quot;我是子协程，工作完毕&quot;
+
+    }()
+
+ 
+
+    //4、阻塞接收
+
+    str := &lt;-ch
+
+    fmt.Println(&quot;str = &quot;, str)
+
+}
+</code></pre>
+
+<p>//程序输出结果
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+子协程 i=  0
+子协程 i=  1
+子协程调用完毕
+str =  我是子协程，工作完毕
+主协程也结束
+成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>无缓冲的channel</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;time&quot;
+)
+
+func main() {
+
+	//创建一个无缓冲的管道
+
+	ch := make(chan int, 1)
+
+	//长度0，缓存能力0
+
+	fmt.Printf(&quot;len(ch) = %d, cap(ch)=%d\n&quot;, len(ch), cap(ch))
+
+	go func() {
+
+		//向管道中存入0，被阻塞，存入1，被阻塞，存入2
+
+		for i := 0; i &lt; 3; i++ {
+
+			fmt.Println(&quot;子协程: i = &quot;, i)
+
+			ch &lt;- i
+
+			fmt.Println(&quot;5秒以内被打印出来给杰神100万！&quot;)
+
+		}
+
+	}()
+
+	//睡眠2秒
+
+	time.Sleep(5 * time.Second)
+
+	//读取0，被阻塞，读取1，被阻塞，读取2
+
+	for i := 0; i &lt; 3; i++ {
+
+		num := &lt;-ch
+
+		fmt.Println(&quot;num = &quot;, num)
+
+	}
+
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+len(ch) = 0, cap(ch)=1
+子协程: i =  0
+5秒以内被打印出来给杰神100万！
+子协程: i =  1
+num =  0
+num =  1
+5秒以内被打印出来给杰神100万！
+子协程: i =  2
+5秒以内被打印出来给杰神100万！
+num =  2
+成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>有缓存的channel</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	//创建3缓存的管道
+	ch := make(chan int, 3)
+	//长度0，缓存能力3（即使没人读，也能写入3个值）
+	fmt.Printf(&quot;len(ch) = %d, cap(ch) = %d\n&quot;, len(ch), cap(ch))
+
+	//一次性存入3个：012,3456789
+	go func() {
+		for i := 0; i &lt; 10; i++ {
+			ch &lt;- i
+			fmt.Printf(&quot;子协程存入[%d]: len(ch) = %d, cap(ch) = %d\n&quot;, i, len(ch), cap(ch))
+			//time.Sleep(1 * time.Second)
+		}
+	}()
+
+	//time.Sleep(5 * time.Second)
+
+	//一次性读取3个：012,345,678,9
+	for i := 0; i &lt; 10; i++ {
+		num := &lt;-ch
+		fmt.Println(&quot;num = &quot;, num)
+	}
+	time.Sleep(1 * time.Nanosecond)
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+len(ch) = 0, cap(ch) = 3
+子协程存入[0]: len(ch) = 0, cap(ch) = 3
+子协程存入[1]: len(ch) = 1, cap(ch) = 3
+子协程存入[2]: len(ch) = 2, cap(ch) = 3
+子协程存入[3]: len(ch) = 3, cap(ch) = 3
+num =  0
+num =  1
+num =  2
+num =  3
+num =  4
+子协程存入[4]: len(ch) = 1, cap(ch) = 3
+子协程存入[5]: len(ch) = 0, cap(ch) = 3
+子协程存入[6]: len(ch) = 1, cap(ch) = 3
+子协程存入[7]: len(ch) = 2, cap(ch) = 3
+子协程存入[8]: len(ch) = 3, cap(ch) = 3
+num =  5
+num =  6
+num =  7
+num =  8
+num =  9
+子协程存入[9]: len(ch) = 1, cap(ch) = 3
+成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<p>##并发技术4：同步调度
+&gt;等待组</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;sync&quot;
+	&quot;time&quot;
+)
+
+//主协程等待子协程全部结束：通过管道阻塞
+func main0() {
+	chanRets := make(chan int, 3)
+	fmt.Println(len(chanRets), cap(chanRets))
+	for i := 0; i &lt; 3; i++ {
+		go func(index int) {
+			ret := getFibonacci(index)
+			chanRets &lt;- ret
+			fmt.Println(index, ret)
+		}(i)
+	}
+
+	for {
+		if len(chanRets) == 3 {
+			time.Sleep(time.Nanosecond)
+			break
+		}
+	}
+}
+
+func main() {
+	var wg sync.WaitGroup
+
+	for i := 0; i &lt; 3; i++ {
+		//等待组中协程数+1(主协程中)
+		wg.Add(1)
+
+		go func(index int) {
+			ret := getFibonacci(index)
+			fmt.Println(index, ret)
+			//等待组中协程数-1(子协程中)
+			wg.Done()
+		}(i)
+	}
+
+	//阻塞至等待组中的协程数为0
+	wg.Wait()
+
+}
+
+func getFibonacci(n int) int {
+	x, y := 1, 1
+	for i := 0; i &lt; n; i++ {
+		x, y = y, x+y
+	}
+	&lt;-time.After(3 * time.Second)
+	return x
+}
+</code></pre>
+
+<hr />
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+0 1
+1 1
+2 2
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<blockquote>
+<p>互斥锁案例1</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;sync&quot;
+	&quot;time&quot;
+)
+
+func main() {
+
+	//必须保证并发安全的数据
+	type Account struct {
+		money float32
+	}
+
+	var wg sync.WaitGroup
+	account := Account{1000}
+	fmt.Println(account)
+
+	//资源互斥锁(谁抢到锁，谁先访问资源，其他人阻塞等待)
+	//全局就这么一把锁，谁先抢到谁操作，其他人被阻塞直到锁释放
+	var mt sync.Mutex
+
+	//银行卡取钱
+	wg.Add(1)
+	go func() {
+		//拿到互斥锁
+		mt.Lock()
+
+		//加锁的访问
+		fmt.Println(&quot;取钱前：&quot;, account.money)
+		account.money -= 500
+		time.Sleep(time.Nanosecond)
+		fmt.Println(&quot;取钱后：&quot;, account.money)
+		wg.Done()
+
+		//释放互斥锁
+		mt.Unlock()
+	}()
+
+	//存折存钱
+	wg.Add(1)
+	go func() {
+		//拿到互斥锁（如果别人先抢到，则阻塞等待）
+		mt.Lock()
+
+		fmt.Println(&quot;存钱前：&quot;, account.money)
+		account.money += 500
+		time.Sleep(time.Nanosecond)
+		fmt.Println(&quot;存钱后：&quot;, account.money)
+		wg.Done()
+
+		//释放互斥锁
+		mt.Unlock()
+	}()
+
+	wg.Wait()
+}
+</code></pre>
+</blockquote>
+
+<hr />
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+{1000}
+存钱前： 1000
+存钱后： 1500
+取钱前： 1500
+取钱后： 1000
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<blockquote>
+<p>互斥锁案例2</p>
+</blockquote>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;sync&quot;
+	&quot;time&quot;
+)
+
+//必须保证并发安全的数据
+type Account struct {
+	name  string
+	money float32
+
+	//定义该数据的互斥锁
+	mt sync.Mutex
+}
+
+//本方法不能被并发执行——并发安全的
+func (a *Account) saveGet(amount float32) {
+	//先将资源锁起来
+	a.mt.Lock()
+
+	//执行操作
+	fmt.Println(&quot;操作前：&quot;, a.money)
+	a.money += amount
+	fmt.Println(&quot;操作后：&quot;, a.money)
+	&lt;-time.After(3 * time.Second)
+
+	//释放资源
+	a.mt.Unlock()
+}
+
+//本方法可以被并发执行——不是并发安全的,无此必要
+func (a *Account) getName() string {
+	return a.name
+}
+
+func main() {
+	a := Account{name: &quot;张全蛋&quot;, money: 1000}
+
+	var wg sync.WaitGroup
+
+	wg.Add(1)
+	go func() {
+		//调用一个加锁的方法（同步）
+		a.saveGet(500)
+		wg.Done()
+	}()
+
+	wg.Add(1)
+	go func() {
+		//调用一个加锁的方法（同步）
+		a.saveGet(-500)
+		wg.Done()
+	}()
+
+	for i := 0; i &lt; 3; i++ {
+		wg.Add(1)
+		go func() {
+			//调用一个普通的没有访问锁的方法（异步）
+			fmt.Println(a.getName())
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+张全蛋
+张全蛋
+张全蛋
+操作前： 1000
+操作后： 1500
+操作前： 1500
+操作后： 1000
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<blockquote>
+<p>通过信号量控制并发数</p>
+
+<pre><code>package main
+ 
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+    &quot;sync&quot;
+)
+ 
+/*信号量：通过控制管道的“带宽”（缓存能力）控制并发数*/
+ 
+func main() {
+ 
+    //定义信号量为5“带宽”的管道
+    sema = make(chan int, 5)
+ 
+    var wg sync.WaitGroup
+    for i := 0; i &lt; 100; i++ {
+        wg.Add(1)
+        go func(index int) {
+            ret := getPingfangshu(index)
+            fmt.Println(index, ret)
+            wg.Done()
+        }(i)
+    }
+    wg.Wait()
+}
+ 
+//该函数只允许5并发执行
+var sema chan int
+func getPingfangshu(i int) int {
+    sema &lt;- 1
+    &lt;-time.After(2 * time.Second)
+    &lt;- sema
+    return i
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+8 8
+2 2
+5 5
+6 6
+0 0
+4 4
+3 3
+1 1
+7 7
+37 37
+10 10
+9 9
+13 13
+12 12
+11 11
+17 17
+18 18
+14 14
+16 16
+15 15
+23 23
+22 22
+20 20
+19 19
+21 21
+24 24
+26 26
+25 25
+27 27
+28 28
+33 33
+30 30
+32 32
+31 31
+29 29
+36 36
+52 52
+38 38
+34 34
+35 35
+39 39
+43 43
+40 40
+41 41
+42 42
+48 48
+44 44
+47 47
+46 46
+45 45
+60 60
+53 53
+51 51
+49 49
+50 50
+54 54
+55 55
+56 56
+58 58
+57 57
+61 61
+62 62
+59 59
+63 63
+65 65
+64 64
+69 69
+66 66
+68 68
+67 67
+74 74
+72 72
+71 71
+73 73
+70 70
+83 83
+76 76
+77 77
+75 75
+78 78
+82 82
+79 79
+80 80
+81 81
+87 87
+86 86
+89 89
+90 90
+84 84
+85 85
+93 93
+91 91
+92 92
+94 94
+88 88
+96 96
+98 98
+97 97
+99 99
+95 95
+成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<p>##接口</p>
+
+<hr />
+
+<p>接口是方法体的集合，接口是一组方法签名。</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+//定义interface
+type VowelsFinder interface {
+	FindVowels() []rune
+}
+
+type MyString string
+
+//实现接口
+func (ms MyString) FindVowels() []rune {
+	var vowels []rune
+	for _, rune := range ms {
+		if rune == 'a' || rune == 'e' || rune == 'i' || rune == 'o' || rune == 'u' {
+			vowels = append(vowels, rune)
+		}
+	}
+	return vowels
+}
+
+func main() {
+	name := MyString(&quot;Sam Anderson&quot;) // 类型转换
+	var v VowelsFinder               // 定义一个接口类型的变量
+	v = name
+	fmt.Printf(&quot;Vowels are %c&quot;, v.FindVowels())
+
+}
+</code></pre>
+
+<p>//程序输出名单：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+Vowels are [a e o]成功: 进程退出代码 0.</p>
+
+<hr />
+
+<blockquote>
+<p>假设某公司有两个员工，一个普通员工和一个高级员工， 但是基本薪资是相同的，高级员工多拿奖金。计算公司为员工的总开支。</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+// 薪资计算器接口
+type SalaryCalculator interface {
+	CalculateSalary() int
+}
+
+// 普通挖掘机员工
+type Contract struct {
+	empId    int
+	basicpay int
+}
+
+// 有蓝翔技校证的员工
+type Permanent struct {
+	empId    int
+	basicpay int
+	jj       int // 奖金
+}
+
+func (p Permanent) CalculateSalary() int {
+	return p.basicpay + p.jj
+}
+
+func (c Contract) CalculateSalary() int {
+	return c.basicpay
+}
+
+// 总开支
+func totalExpense(s []SalaryCalculator) {
+	expense := 0
+	for _, v := range s {
+		expense = expense + v.CalculateSalary()
+	}
+	fmt.Printf(&quot;总开支 $%d&quot;, expense)
+}
+
+func main() {
+	pemp1 := Permanent{1, 3000, 10000}
+	pemp2 := Permanent{2, 3000, 20000}
+	cemp1 := Contract{3, 3000}
+	employees := []SalaryCalculator{pemp1, pemp2, cemp1}
+	totalExpense(employees)
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+总开支 $39000成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<p>##接口的内部实现
+&gt;一个接口可以被认为是由一个元组（类型，值）在内部表示的。type是接口的基础具体类型，value是具体类型的值。</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+type Test interface {
+	Tester()
+}
+
+type MyFloat float64
+
+func (m MyFloat) Tester() {
+	fmt.Println(m)
+}
+
+func describe(t Test) {
+	fmt.Printf(&quot;Interface 类型 %T ,  值： %v\n&quot;, t, t)
+}
+
+func main() {
+	var t Test
+	f := MyFloat(89.7)
+	t = f
+	describe(t)
+	t.Tester()
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+Interface 类型 main.MyFloat ,  值： 89.7
+89.7
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<p>##空接口
+&gt;具有0个方法的接口称为空接口。它表示为interface {}。由于空接口有0个方法，所有类型都实现了空接口。</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func describe(i interface{}) {
+	fmt.Printf(&quot;Type = %T, value = %v\n&quot;, i, i)
+}
+
+func main() {
+	// 任何类型的变量传入都可以
+
+	s := &quot;Hello World&quot;
+	i := 55
+	strt := struct {
+		name string
+	}{
+		name: &quot;Naveen R&quot;,
+	}
+	describe(s)
+	describe(i)
+	describe(strt)
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+Type = string, value = Hello World
+Type = int, value = 55
+Type = struct { name string }, value = {Naveen R}
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<p>##类型断言
+&gt;类型断言用于提取接口的基础值，语法：i.(T)</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func assert(i interface{}) {
+	s := i.(int)
+	fmt.Println(s)
+}
+
+func main() {
+	var s interface{} = 55
+	assert(s)
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+55
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<p>可以将上面改为</p>
+
+<pre><code>package main
+
+import (  
+    &quot;fmt&quot;
+)
+
+func assert(i interface{}) {  
+    v, ok := i.(int)
+    fmt.Println(v, ok)
+}
+func main() {  
+    var s interface{} = 56
+    assert(s)
+    var i interface{} = &quot;Steven Paul&quot;
+    assert(i)
+}
+</code></pre>
+
+<hr />
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+56 true
+0 false
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func assert(i interface{}) {
+	s := i.(string)
+	fmt.Println(s)
+}
+
+func main() {
+	var s interface{} = 55
+	assert(s)
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+panic: interface conversion: interface {} is int, not string</p>
+
+<hr />
+
+<p>##类型判断
+&gt;类型判断的语法类似于类型断言。在类型断言的语法i.（type）中，类型type应该由类型转换的关键字type替换。让我们看看它如何在下面的程序中起作用。</p>
+
+<pre><code>package main
+
+import (  
+    &quot;fmt&quot;
+)
+
+func findType(i interface{}) {  
+    switch i.(type) {
+    case string:
+        fmt.Printf(&quot;String: %s\n&quot;, i.(string))
+    case int:
+        fmt.Printf(&quot;Int: %d\n&quot;, i.(int))
+    default:
+        fmt.Printf(&quot;Unknown type\n&quot;)
+    }
+}
+func main() {  
+    findType(&quot;Naveen&quot;)
+    findType(77)
+    findType(89.98)
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+String: Naveen
+Int: 77
+Unknown type
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+<blockquote>
+<p>还可以将类型与接口进行比较。如果我们有一个类型并且该类型实现了一个接口，那么可以将它与它实现的接口进行比较。</p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+type Describer interface {  
+    Describe()
+}
+type Person struct {  
+    name string
+    age  int
+}
+
+func (p Person) Describe() {  
+    fmt.Printf(&quot;%s is %d years old&quot;, p.name, p.age)
+}
+
+func findType(i interface{}) {  
+    switch v := i.(type) {
+    case Describer:
+        v.Describe()
+    default:
+        fmt.Printf(&quot;unknown type\n&quot;)
+    }
+}
+
+func main() {  
+    findType(&quot;Naveen&quot;)
+    p := Person{
+        name: &quot;Naveen R&quot;,
+        age:  25,
+    }
+    findType(p)
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+unknown type
+Naveen R is 25 years old成功: 进程退出代码 0.</p>
+</blockquote>
+
+<hr />
+
+<p>##值可被修改的条件之一：可被寻址</p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;reflect&quot;
+)
+
+func main() {
+	var a int = 1024
+	valueofA := reflect.ValueOf(a)
+	valueofA.SetInt(1)
+	fmt.Println(valueofA.Int())
+}
+</code></pre>
+
+<p>//程序输出结果:
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+panic: reflect: reflect.Value.SetInt using unaddressable value</p>
+
+<hr />
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;reflect&quot;
+)
+
+func main() {
+	var a int = 1024
+	valueofA := reflect.ValueOf(&amp;a)
+	valueofA = valueofA.Elem()
+	valueofA.SetInt(1)
+	fmt.Println(valueofA.Int())
+}
+</code></pre>
+
+<p>//程序输出结果：
+c:/go/bin/go.exe build [D:/Godata/src/main]
+成功: 进程退出代码 0.
+D:/Godata/src/main/main.exe  [D:/Godata/src/main]
+1
+成功: 进程退出代码 0.</p>
+
+<hr />
+
+
+    </main>
+  </div>
+  <footer>
+    <div class="footer-wrapper">
+      <p>Made with ❤️ &mdash; Powered by <a href="https://gohugo.io/" target="_blank" rel="external">Hugo</a> and the <a href="https://github.com/bjacquemet/personal-web" target='_blank' rel="external">Personal Web</a> theme.</p>
+      <p></p>
+    </div>
+  </footer>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600|Raleway:400,400i,600" rel="stylesheet">
+  
+</body>
+</html>
