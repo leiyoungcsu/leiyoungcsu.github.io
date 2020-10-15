@@ -7,5 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Central south university</copyright><atom:link href="https://leiyoung.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://leiyoung.github.io/c&#43;&#43;-by-examples8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://leiyoung.github.io/c&#43;&#43;-by-examples8/</guid>
+      <description>C++ by examples8 如果一个数字的位模式以0结束，这个数字就是偶数；如果它是以1结束，就是偶数
+#include&amp;lt;iostream&amp;gt; using namespace std; main() { int input; cout&amp;lt;&amp;lt;&amp;quot;what numer?&amp;quot;; cin&amp;gt;&amp;gt;input; if(input &amp;amp;1) { cout&amp;lt;&amp;lt;&amp;quot;the number&amp;quot;&amp;lt;&amp;lt;input&amp;lt;&amp;lt;&amp;quot;is odd\n&amp;quot;;} else { cout&amp;lt;&amp;lt;&amp;quot;the number&amp;quot;&amp;lt;&amp;lt;input&amp;lt;&amp;lt;&amp;quot;is even\n&amp;quot;;} return 0; }  大写和小写字符模式的唯一区别是第五位。小写字母的第五位是1，而大写字母的第五位是0。为了把一个字符转换成大写，必须屏蔽第五位（改为0）。可以把按位&amp;amp;用于输如字符和223（二进制的11011111），以屏蔽第五位。
+#include &amp;lt;iosteam&amp;gt; using namespace std; main() { char first,middle,last; int bitmask=223; cout&amp;lt;&amp;lt;&amp;quot;what is your first?&amp;quot;; cin&amp;gt;&amp;gt;first; cout&amp;lt;&amp;lt;&amp;quot;what is your middle?&amp;quot;; cin&amp;gt;&amp;gt;middle; cout&amp;lt;&amp;lt;&amp;quot;what is your last?&amp;quot;; cin&amp;gt;&amp;gt;last; first=first&amp;amp;bitmask; /*turn off bit 5 if it is not already turned off */ middle=middle&amp;amp;bitmask; last=last&amp;amp;bitmask; cout&amp;lt;&amp;lt;&amp;quot;your initial is &amp;quot;&amp;lt;&amp;lt; first&amp;lt;&amp;lt;&amp;quot; &amp;quot;&amp;lt;&amp;lt;middle&amp;lt;&amp;lt;&amp;quot; &amp;quot;&amp;lt;&amp;lt;last; return 0; }  // 程序输出结果： what is your first?</description>
+    </item>
+    
   </channel>
 </rss>
