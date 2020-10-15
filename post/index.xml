@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ashes Of Time Redux</title>
+    <link>https://leiyoungcsu.github.io/post/</link>
+    <description>Recent content in Posts on Ashes Of Time Redux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 May 2019 15:26:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://leiyoungcsu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Essay</title>
+      <link>https://leiyoungcsu.github.io/post/essay/</link>
+      <pubDate>Tue, 14 May 2019 15:26:30 +0800</pubDate>
+      
+      <guid>https://leiyoungcsu.github.io/post/essay/</guid>
+      <description>青春真像一道道美味的佳肴，虽然也有差些的，那盘子总是好的
+答非所问，其实已经是答了
+中国人的脸，多数是像坍塌了而照常营业的店面
+无为是一种为，不是一种无
+区区人情历练，亦三种境界耳，秦卿一唱，尽在其中：初艾—新晴细履平沙。及壮—乱分春色到人家。垂暮—暗随流水到天涯
+骑着白马入地狱，叼着纸烟到天堂。
+一个酒鬼哼着莫扎特踉跄而过，我觉得自己蠢极了
+葱油热饼的香味，最人间味
+得不到快乐而仍然快乐的才是悲观主义
+屋外暴风雨，卧房，炉火糖粥 暴风雪，糖粥 因为一个我 所有的幸福，全是这样得来的
+樱花盛开即谢，你的事，总这样
+如今却忆江南乐，当时年少春衫薄。骑马倚斜桥，满楼红袖招。
+记得那年花下，深夜，初识谢娘时。水堂西面画帘垂,携手暗相期。
+春日游，杏花吹满头。陌上谁家年少，足风流。</description>
+    </item>
+    
+    <item>
+      <title>Gonotes</title>
+      <link>https://leiyoungcsu.github.io/post/gonotes/</link>
+      <pubDate>Tue, 14 May 2019 15:26:19 +0800</pubDate>
+      
+      <guid>https://leiyoungcsu.github.io/post/gonotes/</guid>
+      <description>Go语言是web时代的C语言
+ 在Go中函数也是一种变量，我们可以通过type来定义它，它的类型就是所有拥有相同的参数，相同的返回值的一种类型。
+// main project main.go package main import ( &amp;quot;fmt&amp;quot; ) type testInt func(int) bool//声明一个函数原型 func isOdd(integer int) bool {//奇数 if integer%2 == 0 { return false } return true } func isEven(integer int) bool {//偶数 if integer%2 == 0 { return true } return false } func filter(slice []int, f testInt) []int { var result []int for _, value := range slice { if f(value) { result = append(result, value) } } return result } func main() { slice := []int{1, 2, 3, 4, 5, 7} fmt.</description>
+    </item>
+    
+  </channel>
+</rss>

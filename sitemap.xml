@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+<<<<<<< HEAD
     <loc>https://leiyoung.github.io/c&#43;&#43;-by-examples8/</loc>
     <priority>0</priority>
   </url>
@@ -11,10 +12,14 @@
     <loc>https://leiyoung.github.io/designs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+=======
+    <loc>https://leiyoung.github.io/categories/</loc>
+>>>>>>> 799ad13b4dbe4d48a784c9cef558f1f0a0085fcd
   </url>
   
   <url>
     <loc>https://leiyoung.github.io/</loc>
+<<<<<<< HEAD
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,6 +28,12 @@
     <loc>https://leiyoung.github.io/techs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+=======
+  </url>
+  
+  <url>
+    <loc>https://leiyoung.github.io/tags/</loc>
+>>>>>>> 799ad13b4dbe4d48a784c9cef558f1f0a0085fcd
   </url>
   
 </urlset>

@@ -5,6 +5,7 @@
     <link>https://leiyoung.github.io/</link>
     <description>Recent content on Homesickness</description>
     <generator>Hugo -- gohugo.io</generator>
+<<<<<<< HEAD
     <language>en-us</language>
     <copyright>© Central south university</copyright><atom:link href="https://leiyoung.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -18,5 +19,9 @@
 #include &amp;lt;iosteam&amp;gt; using namespace std; main() { char first,middle,last; int bitmask=223; cout&amp;lt;&amp;lt;&amp;quot;what is your first?&amp;quot;; cin&amp;gt;&amp;gt;first; cout&amp;lt;&amp;lt;&amp;quot;what is your middle?&amp;quot;; cin&amp;gt;&amp;gt;middle; cout&amp;lt;&amp;lt;&amp;quot;what is your last?&amp;quot;; cin&amp;gt;&amp;gt;last; first=first&amp;amp;bitmask; /*turn off bit 5 if it is not already turned off */ middle=middle&amp;amp;bitmask; last=last&amp;amp;bitmask; cout&amp;lt;&amp;lt;&amp;quot;your initial is &amp;quot;&amp;lt;&amp;lt; first&amp;lt;&amp;lt;&amp;quot; &amp;quot;&amp;lt;&amp;lt;middle&amp;lt;&amp;lt;&amp;quot; &amp;quot;&amp;lt;&amp;lt;last; return 0; }  // 程序输出结果： what is your first?</description>
     </item>
     
+=======
+    <language>zh-cn</language>
+    <copyright>All rights reserved CENTRAL SOUTH UNIVERSITY- 2018</copyright><atom:link href="https://leiyoung.github.io/index.xml" rel="self" type="application/rss+xml" />
+>>>>>>> 799ad13b4dbe4d48a784c9cef558f1f0a0085fcd
   </channel>
 </rss>
